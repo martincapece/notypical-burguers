@@ -13,10 +13,12 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2.5 md:px-8 md:py-4">
         {/* Logo */}
         <Link href="/" className="flex shrink-0 items-center gap-2">
-          <div className="flex items-baseline gap-1">
-            <span className="text-lg font-bold text-foreground md:text-3xl">NO</span>
-            <span className="text-lg font-bold text-brand md:text-3xl">TYPICAL</span>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo.png"
+            alt="NO TYPICAL"
+            className="h-9 w-9 rounded-lg md:h-12 md:w-12"
+          />
         </Link>
 
         {/* Menu */}

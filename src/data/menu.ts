@@ -181,4 +181,18 @@ export const burgers: Burger[] = [
       },
     ],
   },
+  {
+    id: "cheese-burger",
+    name: "Cheese Burger",
+    description: "Carne, doble cheddar y nuestra salsa de la casa. La clásica de siempre.",
+    variants: [
+      {
+        id: "cheese-burger-simple",
+        label: "Simple",
+        layers: 1,
+        priceCents: 0, // PRECIO_PENDIENTE
+        images: ["/images/burger-placeholder.svg"],
+      },
+    ],
+  },
 ];

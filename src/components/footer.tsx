@@ -12,10 +12,12 @@ export function Footer() {
         <div className="grid gap-8 text-center md:grid-cols-3 md:gap-10 md:text-left">
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="mb-4 flex items-baseline gap-1">
-              <span className="text-3xl font-bold text-foreground md:text-4xl">NO</span>
-              <span className="text-3xl font-bold text-brand md:text-4xl">TYPICAL</span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo.png"
+              alt="NO TYPICAL"
+              className="mb-4 h-16 w-16 rounded-xl md:h-20 md:w-20"
+            />
             <p className="max-w-sm text-base leading-relaxed text-muted md:text-lg">
               Smash burgers. Crispy. Juicy. Different. Not for everyone.
             </p>
