@@ -1,0 +1,335 @@
+@import "tailwindcss";
+
+:root {
+  --background: #111111;
+  --surface: #1a1a1a;
+  --surface-soft: #232323;
+  --foreground: #fff6e8;
+  --muted: #b9a88f;
+  --muted-strong: #d3c3a6;
+  --brand: #ff981a;
+  --brand-soft: #ffb24e;
+  --ok: #37d67a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-ok: var(--ok);
+  --font-sans: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 16% 18%, #291801 0%, transparent 28%),
+    radial-gradient(circle at 84% 12%, #402100 0%, transparent 30%),
+    linear-gradient(160deg, #0d0d0d 0%, #151515 55%, #1d1d1d 100%);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title), sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.wn-card {
+  background-color: color-mix(in oklab, var(--surface) 88%, black);
+  border: 1px solid color-mix(in oklab, var(--brand) 24%, black);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+.wn-card:hover {
+  border-color: color-mix(in oklab, var(--brand) 32%, black);
+  box-shadow: 0 20px 50px rgba(255, 152, 26, 0.15);
+  transition: all 300ms ease;
+}
+
+.wn-input {
+  width: 100%;
+  border: 1px solid #3a3a3a;
+  background: color-mix(in oklab, #141414 95%, var(--brand));
+  color: var(--foreground);
+  border-radius: 0.8rem;
+  padding: 0.75rem 0.85rem;
+  transition: all 200ms ease;
+}
+
+.wn-input:hover {
+  border-color: color-mix(in oklab, var(--brand) 40%, black);
+}
+
+.wn-input:focus {
+  outline: 2px solid color-mix(in oklab, var(--brand) 60%, white);
+  outline-offset: 1px;
+  border-color: var(--brand);
+}
+
+.wn-input::placeholder {
+  color: color-mix(in oklab, var(--muted) 60%, transparent);
+}
+
+/* Segmented phone input: fixed country-code chip + free-typing local number */
+.wn-input-group {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  border: 1px solid #3a3a3a;
+  background: color-mix(in oklab, #141414 95%, var(--brand));
+  border-radius: 0.8rem;
+  overflow: hidden;
+  transition: all 200ms ease;
+}
+
+.wn-input-group:hover {
+  border-color: color-mix(in oklab, var(--brand) 40%, black);
+}
+
+.wn-input-group:focus-within {
+  outline: 2px solid color-mix(in oklab, var(--brand) 60%, white);
+  outline-offset: 1px;
+  border-color: var(--brand);
+}
+
+.wn-input-prefix {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 0.85rem;
+  background: rgba(0, 0, 0, 0.28);
+  border-right: 1px solid #3a3a3a;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+.wn-input-bare {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  color: var(--foreground);
+  border: none;
+  outline: none;
+  padding: 0.75rem 0.85rem;
+}
+
+.wn-input-bare::placeholder {
+  color: color-mix(in oklab, var(--muted) 60%, transparent);
+}
+
+.wn-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.65rem 1.2rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 200ms ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.wn-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 8px 20px rgba(255, 152, 26, 0.2);
+}
+
+.wn-btn:active {
+  transform: translateY(0px);
+}
+
+.wn-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.wn-btn-primary {
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-soft) 100%);
+  color: #211100;
+  box-shadow: 0 4px 12px rgba(255, 152, 26, 0.3);
+}
+
+.wn-btn-primary:hover {
+  box-shadow: 0 12px 30px rgba(255, 152, 26, 0.4);
+}
+
+.wn-btn-secondary {
+  background: #202020;
+  border: 1px solid #404040;
+  color: var(--foreground);
+}
+
+.wn-btn-secondary:hover {
+  background: #2a2a2a;
+  border-color: var(--brand);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--brand) 40%, transparent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklab, var(--brand) 60%, transparent);
+}
+
+/* Used where we render our own custom scroll indicator */
+.no-native-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-native-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--brand);
+  color: #211100;
+}
+
+::-moz-selection {
+  background-color: var(--brand);
+  color: #211100;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+.animate-slide-down {
+  /* "both": aplica el estado del primer frame antes de arrancar y mantiene
+     el del último frame al terminar, para que el centrado (translate -50%)
+     no dependa de ninguna otra clase de Tailwind y no "salte". */
+  animation: slideDownFade 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes announcementScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.announcement-track {
+  animation: announcementScroll 28s linear infinite;
+}
+
+.announcement-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marqueeScroll 18s linear infinite;
+}
+
+@keyframes addPulse {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(0.94);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-add-pulse {
+  animation: addPulse 260ms ease;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-bump {
+  animation: bump 320ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float-up {
+  animation: floatUp 0.5s ease both;
+}

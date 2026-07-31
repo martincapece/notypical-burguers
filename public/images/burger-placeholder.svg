@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Generic burger placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#171717"/>
+      <stop offset="100%" stop-color="#262626"/>
+    </linearGradient>
+    <linearGradient id="bunTop" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffb24e"/>
+      <stop offset="100%" stop-color="#ff981a"/>
+    </linearGradient>
+    <linearGradient id="bunBottom" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffa63a"/>
+      <stop offset="100%" stop-color="#f18700"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g transform="translate(120 120)">
+    <rect x="120" y="500" width="720" height="84" rx="42" fill="url(#bunBottom)"/>
+    <rect x="160" y="430" width="640" height="48" rx="24" fill="#ffc66f"/>
+    <rect x="150" y="360" width="660" height="60" rx="30" fill="#2c2c2c"/>
+    <rect x="180" y="322" width="600" height="34" rx="17" fill="#ffce5a"/>
+    <rect x="160" y="280" width="640" height="30" rx="15" fill="#3a7a25"/>
+    <path d="M120 250c15-88 120-160 360-160s345 72 360 160" fill="none" stroke="url(#bunTop)" stroke-width="82" stroke-linecap="round"/>
+    <circle cx="280" cy="190" r="8" fill="#fff0cc"/>
+    <circle cx="360" cy="170" r="8" fill="#fff0cc"/>
+    <circle cx="450" cy="160" r="7" fill="#fff0cc"/>
+    <circle cx="540" cy="170" r="8" fill="#fff0cc"/>
+    <circle cx="620" cy="186" r="8" fill="#fff0cc"/>
+    <circle cx="700" cy="205" r="8" fill="#fff0cc"/>
+  </g>
+
+  <text x="915" y="310" fill="#ffe7c0" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" text-anchor="middle">
+    NO
+  </text>
+  <text x="915" y="370" fill="#ff981a" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" text-anchor="middle">
+    TYPICAL
+  </text>
+  <text x="915" y="415" fill="#ffe7c0" font-family="Arial, Helvetica, sans-serif" font-size="24" text-anchor="middle">
+    imagen generica
+  </text>
+</svg>
